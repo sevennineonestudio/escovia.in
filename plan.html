@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan a Trip — Kayal</title>
+<meta name="description" content="Tell Kayal the shape of your Kerala trip and we'll plan an itinerary between stays that fit — backwaters, hills, wildlife and coast.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+  <img src="images/navlogo1.png" alt="Kayal">
+</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="current">Home</a></li>
+      <li><a href="stays.html">Stays</a></li>
+      <li><a href="plan.html">Plan a Trip</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <button class="nav-toggle">Menu</button>
+    <a href="plan.html" class="nav-cta">Start planning →</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Plan a trip</p>
+    <h1>Give us the shape of your trip. We'll draw the route.</h1>
+    <p class="lede">A few details are enough to start — dates, who's coming, and what you'd rather not miss. We'll come back with a route between stays, built around your pace.</p>
+  </div>
+</header>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="kayal-line-wrap" aria-hidden="true" style="margin-bottom:56px;">
+      <svg viewBox="0 0 1000 140" xmlns="http://www.w3.org/2000/svg">
+        <path class="kayal-path" d="M20,100 C 150,100 180,30 320,30 S 460,110 600,110 S 740,30 860,30 S 940,90 980,60"/>
+        <g>
+          <circle class="kayal-dot" cx="20" cy="100" r="5"/>
+          <text class="kayal-label" x="20" y="122">Day 1 · Arrive</text>
+          <circle class="kayal-dot" cx="600" cy="110" r="5"/>
+          <text class="kayal-label" x="565" y="132">Midway · Slow down</text>
+          <circle class="kayal-dot" cx="980" cy="60" r="5"/>
+          <text class="kayal-label" x="900" y="42">Final days · Depart</text>
+        </g>
+      </svg>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1.1fr .9fr; gap:48px; align-items:flex-start;">
+      <div class="form-card">
+        <form data-demo-form>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" type="text" placeholder="Your full name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="dates">Travel dates</label>
+              <input id="dates" type="text" placeholder="e.g. 12–19 December">
+            </div>
+            <div class="field">
+              <label for="group">Who's travelling</label>
+              <select id="group">
+                <option>Solo</option>
+                <option>Couple</option>
+                <option>Family with kids</option>
+                <option>Friends group</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="interest">What draws you most</label>
+            <select id="interest">
+              <option>Backwaters &amp; houseboats</option>
+              <option>Tea hills &amp; mountains</option>
+              <option>Wildlife &amp; forest</option>
+              <option>Coast &amp; beaches</option>
+              <option>A bit of everything</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="notes">Anything else we should know</label>
+            <textarea id="notes" placeholder="Pace, budget range, must-see stays, dietary needs — whatever helps us plan."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send our way</button>
+          <p class="form-note" style="margin-top:16px; font-size:14px; color:var(--ink-60);"></p>
+        </form>
+      </div>
+
+      <div class="stages" style="grid-template-columns: 1fr; border-radius:20px;">
+        <div class="stage" style="border-left:none;">
+          <p class="eyebrow">You tell us</p>
+          <h3>Dates, people, pace</h3>
+          <p>How long you have, who's travelling, and whether you want backwaters, hills, wildlife, coast — or a bit of all four.</p>
+        </div>
+        <div class="stage" style="border-left:none; border-top:1px solid var(--mist);">
+          <p class="eyebrow">We shape it</p>
+          <h3>A route between real stays</h3>
+          <p>We match your trip to stays we know well and work out the order, the drives, and where to slow down.</p>
+        </div>
+        <div class="stage" style="border-left:none; border-top:1px solid var(--mist);">
+          <p class="eyebrow">You go</p>
+          <h3>One contact, the whole way</h3>
+          <p>A single point of contact for the trip, and a plan you can still shift once you're actually there.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/navlogo1.png" alt="Kayal">
+        <p>Stays, itineraries, and a community of travellers — all built around Kerala.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="stays.html">Stays</a></li>
+          <li><a href="plan.html">Plan a Trip</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li>contact.escovia@gmail.com</li>
+          <li>+91 95672 36247</li>
+          <li>Kochi, Kerala</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SevenNineOne Studio</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
