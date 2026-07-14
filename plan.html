@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan a Trip — Kayal</title>
+<title>Plan a Trip — Escovia</title>
 <meta name="description" content="Tell Kayal the shape of your Kerala trip and we'll plan an itinerary between stays that fit — backwaters, hills, wildlife and coast.">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -54,7 +54,7 @@
       <div class="form-card">
         <form data-demo-form id="enquiry-form">
           <input type="hidden" name="access_key" value="e3904b72-f143-4eed-92d5-9786a0d6ca99">
-          <input type="hidden" name="subject" value="New Trip Enquiry - Kayal">
+          <input type="hidden" name="subject" value="New trip enquiry - Escovia">
 
           <div class="field-row">
             <div class="field">
@@ -69,9 +69,16 @@
 
           <div class="field-row">
             <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="field">
               <label for="dates">Travel dates</label>
               <input id="dates" name="dates" type="text" placeholder="e.g. 12–19 December">
             </div>
+          </div>
+
+          <div class="field-row">
             <div class="field">
               <label for="group">Who's travelling</label>
               <select id="group" name="group">
@@ -81,17 +88,16 @@
                 <option>Friends group</option>
               </select>
             </div>
-          </div>
-
-          <div class="field">
-            <label for="interest">What draws you most</label>
-            <select id="interest" name="interest">
-              <option>Backwaters &amp; houseboats</option>
-              <option>Tea hills &amp; mountains</option>
-              <option>Wildlife &amp; forest</option>
-              <option>Coast &amp; beaches</option>
-              <option>A bit of everything</option>
-            </select>
+            <div class="field">
+              <label for="interest">What draws you most</label>
+              <select id="interest" name="interest">
+                <option>Backwaters &amp; houseboats</option>
+                <option>Tea hills &amp; mountains</option>
+                <option>Wildlife &amp; forest</option>
+                <option>Coast &amp; beaches</option>
+                <option>A bit of everything</option>
+              </select>
+            </div>
           </div>
 
           <div class="field">
@@ -201,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (WHATSAPP_PHONE && CALLMEBOT_KEY) {
           const msg = encodeURIComponent(
-            `New Kayal enquiry!\nName: ${formData.get('name')}\nEmail: ${formData.get('email')}\nDates: ${formData.get('dates')}\nGroup: ${formData.get('group')}\nInterest: ${formData.get('interest')}\nNotes: ${formData.get('notes')}`
+            `New Kayal enquiry!\nName: ${formData.get('name')}\nEmail: ${formData.get('email')}\nPhone: ${formData.get('phone')}\nDates: ${formData.get('dates')}\nGroup: ${formData.get('group')}\nInterest: ${formData.get('interest')}\nNotes: ${formData.get('notes')}`
           );
           fetch(`https://api.callmebot.com/whatsapp.php?phone=${WHATSAPP_PHONE}&text=${msg}&apikey=${CALLMEBOT_KEY}`)
             .catch(() => {}); // fail silently — email already succeeded, don't block the user on this
