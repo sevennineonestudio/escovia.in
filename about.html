@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Escovia</title>
+<meta name="description" content="Escovia began as a small group of friends planning Kerala trips for each other. Today it's a studio of stays, itineraries and a community, still built around places we've actually been.">
+<meta name="theme-color" content="#0a110d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="wrap bar">
+    <a href="index.html" class="brand"><img src="images/navlogo2.png" alt="Escovia"></a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stays.html">Stays</a></li>
+        <li><a href="plan.html">Plan a Trip</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li class="only-mobile"><a href="plan.html">Start planning →</a></li>
+      </ul>
+    </nav>
+    <a href="plan.html" class="btn btn-solid nav-cta">Start planning</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">About Escovia</p>
+    <h1>We started with one houseboat and a long drive to Munnar.</h1>
+    <p class="lede">Escovia began as a small group of friends planning Kerala trips for each other. It's since grown into a studio of stays, itineraries, and a community, but the way we work hasn't changed much.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="pillars">
+      <article class="pillar">
+        <span class="num">01</span>
+        <p class="tag">What we believe</p>
+        <h3>Fewer stays, known well</h3>
+        <p>We'd rather list fifty stays we've actually slept in than five hundred we've only seen in photographs. Every recommendation on Escovia comes from someone who has been there.</p>
+      </article>
+      <article class="pillar">
+        <span class="num">02</span>
+        <p class="tag">How we plan</p>
+        <h3>Around you, not a template</h3>
+        <p>No fixed packages. Every itinerary starts from your dates and your pace, and gets built stay by stay, drive by drive, around that.</p>
+      </article>
+      <article class="pillar">
+        <span class="num">03</span>
+        <p class="tag">Why the community</p>
+        <h3>The map is never finished</h3>
+        <p>Travellers keep finding places we haven't — a trail, a village, a quiet stretch of coast. The community exists so that knowledge doesn't disappear after one trip.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="contact">
+  <div class="wrap split split-contact">
+    <div>
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="split-title">Questions before you plan a trip?</h2>
+      <p class="split-text">Write to us directly, or use the <a href="plan.html" class="text-link">planning form</a> if you're ready to start shaping an itinerary.</p>
+
+      <ul class="contact-list">
+        <li>
+          <small>Email</small>
+          <a href="mailto:contact.escovia@gmail.com">contact.escovia@gmail.com</a>
+        </li>
+        <li>
+          <small>Phone</small>
+          <a href="tel:+919567236247">+91 95672 36247</a>
+        </li>
+        <li>
+          <small>WhatsApp</small>
+          <a class="wa" href="https://wa.me/919567236247?text=Hi%20Escovia%2C%20I%27d%20like%20to%20plan%20a%20trip%20in%20Kerala." target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </li>
+        <li>
+          <small>Based in</small>
+          <span>Kochi, Kerala, India</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <form data-web3 novalidate>
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Message — Escovia">
+        <input type="hidden" name="from_name" value="Escovia Website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="aname">Your name</label>
+            <input id="aname" name="name" type="text" placeholder="Full name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="aemail">Email</label>
+            <input id="aemail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="amsg">Message</label>
+          <textarea id="amsg" name="message" rows="5" placeholder="What would you like to ask?" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-solid">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="thanks" hidden>
+        <span class="tick" aria-hidden="true">✓</span>
+        <h2>Message received.</h2>
+        <p>Thank you for writing. We'll reply by email, usually within a day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/navlogo2.png" alt="Escovia" class="foot-logo">
+        <p>Stays, itineraries, and a community of travellers — all built around Kerala.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="stays.html">Stays</a></li>
+          <li><a href="plan.html">Plan a Trip</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:contact.escovia@gmail.com">contact.escovia@gmail.com</a></li>
+          <li><a href="tel:+919567236247">+91 95672 36247</a></li>
+          <li><a class="wa" href="https://wa.me/919567236247?text=Hi%20Escovia%2C%20I%27d%20like%20to%20plan%20a%20trip%20in%20Kerala." target="_blank" rel="noopener">WhatsApp us</a></li>
+          <li>Kochi, Kerala</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 SevenNineOne Studio</div>
+  </div>
+</footer>
+
+</body>
+</html>

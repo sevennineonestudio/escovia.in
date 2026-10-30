@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escovia — Stays &amp; Itineraries Across Kerala</title>
+<meta name="description" content="Handpicked resorts and stays across Kerala, itineraries planned around you, and a growing community of travellers sharing the state's unexplored corners.">
+<meta name="theme-color" content="#0a110d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="wrap bar">
+    <a href="index.html" class="brand"><img src="images/navlogo2.png" alt="Escovia"></a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="stays.html">Stays</a></li>
+        <li><a href="plan.html">Plan a Trip</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="only-mobile"><a href="plan.html">Start planning →</a></li>
+      </ul>
+    </nav>
+    <a href="plan.html" class="btn btn-solid nav-cta">Start planning</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="slides" aria-hidden="true">
+    <div class="slide is-active"><img src="images/index1.png" alt="" fetchpriority="high"></div>
+    <div class="slide"><img src="images/index2.png" alt="" loading="lazy"></div>
+    <div class="slide"><img src="images/index3.png" alt="" loading="lazy"></div>
+  </div>
+  <div class="hero-shade"></div>
+
+  <div class="wrap hero-copy">
+    <p class="eyebrow">Stays · Journeys · Experiences</p>
+    <h1>Find your <em>kind</em> of somewhere.</h1>
+    <p class="lede">Discover places worth going to, stays worth remembering, and journeys worth taking.</p>
+    <p class="lede">From hidden escapes and charming hideaways to faraway destinations, Escovia brings together handpicked stays, thoughtfully planned itineraries, and travel inspiration to help you explore the world your way.</p>
+    <div class="actions">
+      <a href="stays.html" class="btn btn-solid">Browse stays</a>
+      <a href="plan.html" class="btn btn-outline-light">Plan my itinerary</a>
+    </div>
+  </div>
+
+  <div class="dots" role="tablist" aria-label="Slideshow"></div>
+</section>
+
+<div class="wrap finder-wrap">
+  <form class="finder" action="plan.html" method="get">
+    <label>Where
+      <select name="region">
+        <option value="">Anywhere in Kerala</option>
+        <option>Kochi</option><option>Alleppey</option><option>Munnar</option>
+        <option>Kumarakom</option><option>Wayanad</option><option>Varkala</option>
+        <option>Vagamon</option><option>Kasargod</option><option>Coorg</option>
+        <option>Ooty</option><option>Kodaikanal</option>
+      </select>
+    </label>
+    <label>Style
+      <select name="style">
+        <option value="">Any style</option>
+        <option>Backwaters</option><option>Hills</option><option>Wildlife</option><option>Coast</option>
+      </select>
+    </label>
+    <label>Check-in<input type="date" name="from"></label>
+    <label>Travellers
+      <select name="guests">
+        <option>2 guests</option><option>3–4 guests</option><option>5–8 guests</option><option>9+ guests</option>
+      </select>
+    </label>
+    <button type="submit" class="btn btn-solid">Enquire Now</button>
+  </form>
+</div>
+
+<section class="stats-sec">
+  <div class="wrap">
+    <ul class="stats" aria-label="Escovia at a glance">
+      <li><strong><span data-count="10">10</span>+</strong><small>Partner locations</small></li>
+      <li><strong><span data-count="50">50</span>+</strong><small>Cozy properties</small></li>
+      <li><strong><span data-count="10">10</span>+</strong><small>Happy customers</small></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="pillars">
+      <article class="pillar">
+        <span class="num">01</span>
+        <p class="tag">Stays</p>
+        <h3>Resorts &amp; homestays, seen in person</h3>
+        <p>Every listing on Escovia has been visited by someone on our team — the backwater houseboats of Alleppey, tea-estate bungalows above Munnar, cliffside stays in Varkala, and quiet homestays in between.</p>
+      </article>
+      <article class="pillar">
+        <span class="num">02</span>
+        <p class="tag">Itineraries</p>
+        <h3>Routes built around how you travel</h3>
+        <p>Tell us how many days you have and what draws you — backwaters, hills, wildlife, the coast — and we'll shape a route between stays, with the driving, the timing, and the quiet mornings already worked out.</p>
+      </article>
+      <article class="pillar">
+        <span class="num">03</span>
+        <p class="tag">Community</p>
+        <h3>A place for the roads less mapped</h3>
+        <p>Travellers share the villages, viewpoints, and small eateries that don't show up in guidebooks — and the ones planning their own Kerala trip come here first to read them.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="sec-top">
+      <div class="sec-head">
+        <p class="eyebrow">Featured stays</p>
+        <h2>A handful of favourites, to start.</h2>
+      </div>
+      <a href="stays.html" class="btn btn-outline">See all stays</a>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <a href="stays.html" class="card-img"><img src="images/btwonindex.jpg" alt="B Town Resort" loading="lazy"></a>
+        <div class="card-body">
+          <p class="region">Kochi · Heritage &amp; Culture</p>
+          <h3>B Town Resort</h3>
+          <p>A peaceful resort near Wonderla Kochi, featuring 21 private cottages set among lush greenery, with garden cottages, private-pool villas, a restaurant, and spacious accommodations ideal for family getaways and relaxing weekends.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Details →</a></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="stays.html" class="card-img"><img src="images/palmgroveindex.jpg" alt="Palmgrove Lake Resort" loading="lazy"></a>
+        <div class="card-body">
+          <p class="region">Alappuzha · Backwaters</p>
+          <h3>Palmgrove Lake Resort</h3>
+          <p>A tranquil lakeside retreat on the banks of Punnamada Lake, featuring elegant Heritage Villas, lush green surroundings, lake views, yoga experiences, and backwater activities for a peaceful and rejuvenating stay in Alleppey.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Details →</a></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="stays.html" class="card-img"><img src="images/camplights.jpg" alt="Camp Lights" loading="lazy"></a>
+        <div class="card-body">
+          <p class="region">Adimali · Hill Station</p>
+          <h3>Camp Lights</h3>
+          <p>A nature-focused retreat near Cheeyappara Waterfalls, surrounded by lush hills and valley views, offering tents, log houses, cabins, and A-frame cottages along with a swimming pool and peaceful outdoor setting for a refreshing mountain escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Details →</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <p class="eyebrow">How planning works</p>
+      <h2>Three conversations, one itinerary.</h2>
+      <p>No packages, no fixed routes. You tell us the shape of your trip; we fill it in with stays and days that actually fit together.</p>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <p class="eyebrow">You tell us</p>
+        <h3>Dates, people, pace</h3>
+        <p>How long you have, who's travelling, and whether you want backwaters, hills, wildlife, coast — or a bit of all four.</p>
+      </li>
+      <li>
+        <p class="eyebrow">We shape it</p>
+        <h3>A route between real stays</h3>
+        <p>We match your trip to stays we know well and work out the order, the drives, and where to slow down.</p>
+      </li>
+      <li>
+        <p class="eyebrow">You go</p>
+        <h3>One contact, the whole way</h3>
+        <p>A single point of contact for the trip, and a plan you can still shift once you're actually there.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="sec-top">
+      <div class="sec-head">
+        <p class="eyebrow">From the community</p>
+        <h2>Kerala, in travellers' own words.</h2>
+      </div>
+      <a href="community.html" class="btn btn-outline">Read the community</a>
+    </div>
+
+    <div class="stories">
+      <figure class="story">
+        <blockquote>"We found a spice-terrace walk in Thekkady no map had marked — the family who owns it now walks us through it every year."</blockquote>
+        <figcaption>Ananya R. · Thekkady</figcaption>
+      </figure>
+      <figure class="story">
+        <blockquote>"An hour past the usual Wayanad viewpoints, there's a ridge where you can watch the clouds move below you. Worth the extra hour."</blockquote>
+        <figcaption>Fahad K. · Wayanad</figcaption>
+      </figure>
+      <figure class="story">
+        <blockquote>"The fishing village next to Marari is quieter than the beach itself, and the evenings there are the best part of our trip."</blockquote>
+        <figcaption>Leah &amp; Tom · Marari</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Tell us where in Kerala you're headed, and we'll start shaping the trip.</h2>
+      <a href="plan.html" class="btn btn-solid">Plan my itinerary →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/navlogo2.png" alt="Escovia" class="foot-logo">
+        <p>Stays, itineraries, and a community of travellers — all built around Kerala.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="stays.html">Stays</a></li>
+          <li><a href="plan.html">Plan a Trip</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:contact.escovia@gmail.com">contact.escovia@gmail.com</a></li>
+          <li><a href="tel:+919567236247">+91 95672 36247</a></li>
+          <li><a class="wa" href="https://wa.me/919567236247?text=Hi%20Escovia%2C%20I%27d%20like%20to%20plan%20a%20trip%20in%20Kerala." target="_blank" rel="noopener">WhatsApp us</a></li>
+          <li>Kochi, Kerala</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 SevenNineOne Studio</div>
+  </div>
+</footer>
+
+</body>
+</html>

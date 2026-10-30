@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Community — Escovia</title>
+<meta name="description" content="Travellers share the Kerala that doesn't make the guidebooks — a village, a trail, a view, a meal. Read their stories, join the Escovia community, or add your own.">
+<meta name="theme-color" content="#0a110d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="wrap bar">
+    <a href="index.html" class="brand"><img src="images/navlogo2.png" alt="Escovia"></a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stays.html">Stays</a></li>
+        <li><a href="plan.html">Plan a Trip</a></li>
+        <li><a href="community.html" aria-current="page">Community</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="only-mobile"><a href="plan.html">Start planning →</a></li>
+      </ul>
+    </nav>
+    <a href="plan.html" class="btn btn-solid nav-cta">Start planning</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Travel community</p>
+    <h1>The Kerala that doesn't make the guidebooks.</h1>
+    <p class="lede">Travellers who've stayed with us share what they found off the route — a village, a trail, a view, a meal. Read what's here, join in, or add your own.</p>
+    <div class="actions">
+      <a href="#join" class="btn btn-solid">Join the community</a>
+      <a href="#share" class="btn btn-outline-light">Share a story</a>
+    </div>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <div class="wrap">
+    <div class="chip-row" role="group" aria-label="Filter stories">
+      <button class="chip" data-filter="all" aria-pressed="true">All stories</button>
+      <button class="chip" data-filter="backwaters" aria-pressed="false">Backwaters</button>
+      <button class="chip" data-filter="hills" aria-pressed="false">Hills</button>
+      <button class="chip" data-filter="wildlife" aria-pressed="false">Wildlife</button>
+      <button class="chip" data-filter="coast" aria-pressed="false">Coast</button>
+    </div>
+  </div>
+</div>
+
+<section class="listing">
+  <div class="wrap">
+    <p class="result-count" id="count" aria-live="polite" data-one="story" data-many="stories"></p>
+    <div class="stories">
+      <figure class="story" data-region="wildlife">
+        <blockquote>"We found a spice-terrace walk in Thekkady no map had marked — the family who owns it now walks us through it every year."</blockquote>
+        <figcaption>Ananya R. · Thekkady</figcaption>
+      </figure>
+      <figure class="story" data-region="hills">
+        <blockquote>"An hour past the usual Wayanad viewpoints, there's a ridge where you can watch the clouds move below you. Worth the extra hour."</blockquote>
+        <figcaption>Fahad K. · Wayanad</figcaption>
+      </figure>
+      <figure class="story" data-region="coast">
+        <blockquote>"The fishing village next to Marari is quieter than the beach itself, and the evenings there are the best part of our trip."</blockquote>
+        <figcaption>Leah &amp; Tom · Marari</figcaption>
+      </figure>
+      <figure class="story" data-region="backwaters">
+        <blockquote>"There's a toddy shop outside Kumarakom that only locals seem to know about — best lunch of our whole trip, by far."</blockquote>
+        <figcaption>Devika S. · Kumarakom</figcaption>
+      </figure>
+      <figure class="story" data-region="hills">
+        <blockquote>"Waking up before sunrise in Vagamon to watch the meadow fill with mist was worth every early alarm."</blockquote>
+        <figcaption>Rahul M. · Vagamon</figcaption>
+      </figure>
+      <figure class="story" data-region="backwaters">
+        <blockquote>"A boatman near Punnamada took us down a canal that doesn't appear on any houseboat route — just paddy fields and silence."</blockquote>
+        <figcaption>Priya &amp; Nikhil · Alleppey</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="join">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Why join</p>
+      <h2 class="split-title">A community that helps you travel better.</h2>
+      <p class="split-text">Ask questions, swap routes, and get the small local details that make a trip. Members get a little more from Escovia too.</p>
+
+      <ul class="perks">
+        <li>
+          <span class="num">01</span>
+          <h3>Ask before you go</h3>
+          <p>Questions on routes, seasons and stays — answered by the Escovia team and travellers who've been there.</p>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <h3>Early access</h3>
+          <p>Be the first to hear about new partner stays and fresh corners of Kerala.</p>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <h3>Member offers</h3>
+          <p>Seasonal offers and special rates from selected partner properties.</p>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <h3>Be featured</h3>
+          <p>Your stories can appear on this page, with your name, for the next traveller to find.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <form data-web3 novalidate>
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Community Member — Escovia">
+        <input type="hidden" name="from_name" value="Escovia Website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <h3 class="form-title">Become a member</h3>
+
+        <div class="field">
+          <label for="jname">Your name</label>
+          <input id="jname" name="name" type="text" placeholder="Full name" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="jemail">Email</label>
+            <input id="jemail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="jphone">Phone / WhatsApp</label>
+            <input id="jphone" name="phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel">
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>What interests you</legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="interest" value="Backwaters"><span>Backwaters</span></label>
+            <label class="opt"><input type="checkbox" name="interest" value="Hills"><span>Hills</span></label>
+            <label class="opt"><input type="checkbox" name="interest" value="Wildlife"><span>Wildlife</span></label>
+            <label class="opt"><input type="checkbox" name="interest" value="Coast"><span>Coast</span></label>
+            <label class="opt"><input type="checkbox" name="interest" value="Camping"><span>Camping</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-solid">Join the community</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="thanks" hidden>
+        <span class="tick" aria-hidden="true">✓</span>
+        <h2>Welcome aboard.</h2>
+        <p>You're on the list. We'll be in touch soon with what's new in the community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="share">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Share yours</p>
+      <h2 class="split-title">Found somewhere worth sharing?</h2>
+      <p class="split-text">A trail, a stay, a meal, a view — if it stayed with you, it'll likely stay with someone else planning their own trip. Tell us about it, and we'll add it here after a quick read.</p>
+    </div>
+
+    <div class="form-card">
+      <form data-web3 novalidate>
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Community Story — Escovia">
+        <input type="hidden" name="from_name" value="Escovia Website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="sname">Your name</label>
+            <input id="sname" name="name" type="text" placeholder="Full name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="semail">Email</label>
+            <input id="semail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="splace">Place</label>
+            <input id="splace" name="place" type="text" placeholder="e.g. Vagamon, Kerala" required>
+          </div>
+          <div class="field">
+            <label for="stype">Kind of experience</label>
+            <select id="stype" name="type">
+              <option>Backwaters</option>
+              <option>Hills</option>
+              <option>Wildlife</option>
+              <option>Coast</option>
+              <option>Something else</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="sstory">Your story</label>
+          <textarea id="sstory" name="story" rows="5" maxlength="600" placeholder="What did you find, and why did it stay with you?" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-solid">Share with the community</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="thanks" hidden>
+        <span class="tick" aria-hidden="true">✓</span>
+        <h2>Thank you for sharing.</h2>
+        <p>We'll read your story and add it to this page soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/navlogo2.png" alt="Escovia" class="foot-logo">
+        <p>Stays, itineraries, and a community of travellers — all built around Kerala.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="stays.html">Stays</a></li>
+          <li><a href="plan.html">Plan a Trip</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:contact.escovia@gmail.com">contact.escovia@gmail.com</a></li>
+          <li><a href="tel:+919567236247">+91 95672 36247</a></li>
+          <li><a class="wa" href="https://wa.me/919567236247?text=Hi%20Escovia%2C%20I%27d%20like%20to%20plan%20a%20trip%20in%20Kerala." target="_blank" rel="noopener">WhatsApp us</a></li>
+          <li>Kochi, Kerala</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 SevenNineOne Studio</div>
+  </div>
+</footer>
+
+</body>
+</html>

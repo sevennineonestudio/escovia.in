@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stays across Kerala — Escovia</title>
+<meta name="description" content="Backwater houseboats, hill bungalows, coastal cottages and forest homestays across Kerala — every stay visited in person by the Escovia team.">
+<meta name="theme-color" content="#0a110d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="wrap bar">
+    <a href="index.html" class="brand"><img src="images/navlogo2.png" alt="Escovia"></a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stays.html" aria-current="page">Stays</a></li>
+        <li><a href="plan.html">Plan a Trip</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="only-mobile"><a href="plan.html">Start planning →</a></li>
+      </ul>
+    </nav>
+    <a href="plan.html" class="btn btn-solid nav-cta">Start planning</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Stays across Kerala</p>
+    <h1>Every stay here, someone from Escovia has slept in.</h1>
+    <p class="lede">Backwater houseboats, hill bungalows, coastal cottages and forest homestays — filter by region, or just start reading.</p>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <div class="wrap">
+    <div class="chip-row" role="group" aria-label="Filter stays by region">
+      <button class="chip" data-filter="all" aria-pressed="true">All regions</button>
+      <button class="chip" data-filter="camp" aria-pressed="false">Camping</button>
+      <button class="chip" data-filter="alleppey" aria-pressed="false">Alleppey · Backwaters</button>
+      <button class="chip" data-filter="kumarakom" aria-pressed="false">Kumarakom · Backwaters</button>
+      <button class="chip" data-filter="wayanad" aria-pressed="false">Wayanad · Hills</button>
+      <button class="chip" data-filter="kochi" aria-pressed="false">Kochi · Heritage &amp; Culture</button>
+      <button class="chip" data-filter="athirappilly" aria-pressed="false">Athirappilly · Waterfalls</button>
+      <button class="chip" data-filter="kakkadampoil" aria-pressed="false">Kakkadampoil · Hills</button>
+      <button class="chip" data-filter="bekal" aria-pressed="false">Bekal · Fort &amp; Beach</button>
+      <button class="chip" data-filter="munnar" aria-pressed="false">Munnar · Hills</button>
+      <button class="chip" data-filter="vattavada" aria-pressed="false">Vattavada · Hills</button>
+      <button class="chip" data-filter="varkala" aria-pressed="false">Varkala · Beach</button>
+      <button class="chip" data-filter="coorg" aria-pressed="false">Coorg · Misty Hills</button>
+    </div>
+  </div>
+</div>
+
+<section class="listing">
+  <div class="wrap">
+    <p class="result-count" id="count" aria-live="polite" data-one="stay" data-many="stays"></p>
+
+    <div class="cards">
+
+      <article class="card" data-region="alleppey">
+        <a href="plan.html" class="card-img"><img src="images/deshadan.jpg" alt="Deshadan Backwater Resorts" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Alleppey · Backwaters</p>
+          <h3>Deshadan Backwater Resorts</h3>
+          <p>A peaceful lakeside resort on the banks of Vembanad Lake, offering comfortable rooms and private-pool villas, lush landscaped surroundings, an outdoor pool, Ayurvedic spa, and boating experiences for a relaxing backwater getaway.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="alleppey">
+        <a href="plan.html" class="card-img"><img src="images/palmgrove.jpg" alt="Palmgrove Lake Resort" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Alleppey · Backwaters</p>
+          <h3>Palmgrove Lake Resort</h3>
+          <p>A tranquil lakeside retreat on the banks of Punnamada Lake, featuring elegant Heritage Villas, lush green surroundings, lake views, yoga experiences, and backwater activities for a peaceful and rejuvenating stay in Alleppey.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="alleppey">
+        <a href="plan.html" class="card-img"><img src="images/vedicvillage.jpg" alt="Vedic Village Retreat" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Alleppey · Backwaters</p>
+          <h3>Vedic Village Retreat</h3>
+          <p>A serene private-island retreat surrounded by Kerala’s backwaters and lush natural landscapes, offering an intimate escape with thoughtfully designed accommodations, wellness experiences, and peaceful waterfront settings away from the bustle of everyday life.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="alleppey">
+        <a href="plan.html" class="card-img"><img src="images/lakecanopy.jpg" alt="Lake Canopy" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Alleppey · Backwaters</p>
+          <h3>Lake Canopy</h3>
+          <p>A contemporary lakeside resort surrounded by the tranquil backwaters and greenery of Alleppey, offering comfortable accommodations, scenic views, leisure facilities, and a peaceful setting for guests looking to unwind amid Kerala’s natural beauty.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="athirappilly">
+        <a href="plan.html" class="card-img"><img src="images/rainforest.jpg" alt="Rainforest" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Athirappilly · Waterfalls</p>
+          <h3>Rainforest</h3>
+          <p>A secluded luxury retreat nestled within seven acres of pristine Sholayar rainforest, offering intimate rooms and a unique treehouse with stunning waterfall views, an infinity pool, Ayurvedic wellness experiences, and immersive nature activities for a tranquil escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="kochi">
+        <a href="plan.html" class="card-img"><img src="images/dutchbunlalow.jpg" alt="The Dutch Bungalow" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Kochi · Heritage &amp; Culture</p>
+          <h3>The Dutch Bungalow</h3>
+          <p>A charming heritage stay in the heart of Fort Kochi, housed in a 350-year-old bungalow and located close to Fort Kochi Beach, with colonial character, a swimming pool, multi-cuisine dining, and easy access to the area’s historic landmarks.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="kochi">
+        <a href="plan.html" class="card-img"><img src="images/btwon.jpg" alt="B Town Resort Kochi" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Kochi · Heritage &amp; Culture</p>
+          <h3>B Town Resort Kochi</h3>
+          <p>A peaceful resort near Wonderla Kochi, featuring 21 private cottages set among lush greenery, with garden cottages, private-pool villas, a restaurant, and spacious accommodations ideal for family getaways and relaxing weekends.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="kochi">
+        <a href="plan.html" class="card-img"><img src="images/olam.jpg" alt="Olam Kochi" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Kochi · Heritage &amp; Culture</p>
+          <h3>Olam Kochi</h3>
+          <p>A tranquil waterfront retreat in Panangad, Kochi, surrounded by Kerala’s lush backwaters and natural beauty, offering comfortable stays, dining, cycling, and water-based experiences for a peaceful escape close to the city.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="kakkadampoil">
+        <a href="plan.html" class="card-img"><img src="images/mistyqueen.jpg" alt="Misty Queen Resort" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Kakkadampoil · Hills</p>
+          <h3>Misty Queen Resort</h3>
+          <p>A grand hillside retreat in Kakkadampoyil surrounded by lush mountain landscapes, featuring a covered infinity pool, landscaped grounds, comfortable accommodations, and scenic valley views for a peaceful and refreshing escape in the Western Ghats.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="bekal">
+        <a href="plan.html" class="card-img"><img src="images/neeleshwarhermitage.jpg" alt="Neeleshwar Hermitage" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Bekal · Fort &amp; Beach</p>
+          <h3>Neeleshwar Hermitage</h3>
+          <p>A secluded beachfront retreat nestled among coconut palms on the Malabar coast, featuring traditional Kerala-inspired cottages, lush gardens, an infinity pool, Ayurvedic spa, and yoga experiences for a peaceful and rejuvenating escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="bekal">
+        <a href="plan.html" class="card-img"><img src="images/malabaresort.jpg" alt="Malabar Ocean Front Resort &amp; Spa" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Bekal · Fort &amp; Beach</p>
+          <h3>Malabar Ocean Front Resort &amp; Spa</h3>
+          <p>A serene beachfront resort on the Malabar coast, offering spacious accommodations, a private beach setting, leisure facilities, and a relaxing atmosphere surrounded by the natural beauty of Kerala’s coastline.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="kumarakom">
+        <a href="plan.html" class="card-img"><img src="images/backwater ripples.jpg" alt="Backwater Ripples" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Kumarakom · Backwaters</p>
+          <h3>Backwater Ripples</h3>
+          <p>A tranquil lakeside resort spread across lush greenery along the Vembanad Lake, blending traditional Kerala architecture with modern comforts, scenic lake-view accommodations, Ayurvedic wellness, swimming pools, and peaceful backwater experiences.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="kumarakom">
+        <a href="plan.html" class="card-img"><img src="images/abadwhispering.jpg" alt="Abad Whispering Palms" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Kumarakom · Backwaters</p>
+          <h3>Abad Whispering Palms</h3>
+          <p>A serene lakeside resort on the banks of Vembanad Lake, surrounded by lush greenery and calm backwaters, featuring lake-facing cottages, private-pool villas, an Ayurvedic spa, swimming pool, and boating experiences for a relaxing Kerala escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="munnar">
+        <a href="plan.html" class="card-img"><img src="images/elephantpasage.jpg" alt="Elephant Passage" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Munnar · Hills</p>
+          <h3>Elephant Passage</h3>
+          <p>A peaceful forest retreat tucked away from Munnar’s busy tourist areas, surrounded by dense greenery and misty mountains, with thoughtfully positioned accommodations, scenic balconies, and a tranquil atmosphere for an immersive nature escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="munnar">
+        <a href="plan.html" class="card-img"><img src="images/fragrant.jpg" alt="Fragrant Nature" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Munnar · Hills</p>
+          <h3>Fragrant Nature</h3>
+          <p>An elegant mountain retreat surrounded by misty hills, tea plantations, and forests, blending colonial-inspired charm with modern comforts, scenic valley views, wellness experiences, and refined dining for a refreshing escape in Munnar.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="munnar">
+        <a href="plan.html" class="card-img"><img src="images/Windermere.jpg" alt="Windermere Estate" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Munnar · Hills</p>
+          <h3>Windermere Estate</h3>
+          <p>A secluded plantation retreat set high in the Munnar hills, surrounded by tea and cardamom estates, lush valleys, and spectacular mountain views, offering rustic chalet-style rooms, a pool, plantation walks, and personalized dining for a peaceful escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="munnar">
+        <a href="plan.html" class="card-img"><img src="images/elam.png" alt="Élam Munnar" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Munnar · Hills</p>
+          <h3>Élam Munnar</h3>
+          <p>A secluded luxury retreat set across 16 acres of cardamom and coffee plantations, featuring contemporary glass cottages, panoramic Western Ghats views, nature trails, stargazing, and locally inspired dining for an intimate escape immersed in nature.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="munnar">
+        <a href="plan.html" class="card-img"><img src="images/viceroy.jpg" alt="Viceroy Luxury Mountain Resort &amp; Spa" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Munnar · Hills</p>
+          <h3>Viceroy Luxury Mountain Resort &amp; Spa</h3>
+          <p>A boutique mountain retreat near Chokramudi Peak, surrounded by tea and spice plantations, offering spacious rooms with mountain views, a swimming pool, spa, garden walks, and indoor activities for a relaxing Munnar getaway.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="vattavada">
+        <a href="plan.html" class="card-img"><img src="images/chandys.jpg" alt="Chandys Drizzle Drops" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Vattavada · Hills</p>
+          <h3>Chandys Drizzle Drops</h3>
+          <p>A luxury hillside retreat perched on the edge of the Western Ghats near Top Station, surrounded by towering peaks and misty valleys, offering elegant rooms, a heated infinity pool, spa, fitness centre, and panoramic mountain views for a serene Munnar escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="vattavada">
+        <a href="plan.html" class="card-img"><img src="images/campnoel.jpg" alt="Camp Noel" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Vattavada · Hills</p>
+          <h3>Camp Noel</h3>
+          <p>A secluded mountain retreat in the peaceful hills of Pazhathottam, surrounded by forests, misty landscapes, and expansive mountain views, offering cozy accommodations and a tranquil nature-focused setting for an intimate escape away from Munnar’s bustle.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="wayanad">
+        <a href="plan.html" class="card-img"><img src="images/teaterrace.jpg" alt="Tea Terrace Vythiri Resort" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Wayanad · Hills</p>
+          <h3>Tea Terrace Vythiri Resort</h3>
+          <p>A charming hillside retreat set amid a tea plantation in Vythiri, surrounded by lush greenery and misty mountain landscapes, offering cozy Spanish-style cottages, scenic plantation views, and a peaceful setting for a refreshing Wayanad escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="wayanad">
+        <a href="plan.html" class="card-img"><img src="images/wildplanet.jpg" alt="Wild Planet Jungle Resort" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Wayanad · Hills</p>
+          <h3>Wild Planet Jungle Resort</h3>
+          <p>A secluded jungle retreat nestled within the forested Nilgiri Mountains, surrounded by tea plantations and abundant greenery, offering comfortable cottages and cabins, mountain views, open-air dining, and wildlife experiences for an immersive nature escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="wayanad">
+        <a href="plan.html" class="card-img"><img src="images/mountainshadows.jpg" alt="Mountain Shadows Resort" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Wayanad · Hills</p>
+          <h3>Mountain Shadows Resort</h3>
+          <p>A secluded luxury retreat set on a serene peninsula overlooking Banasura Sagar Lake, surrounded by dense forests and misty mountains, featuring lake-view villas, an infinity pool, Ayurvedic wellness, and immersive nature experiences.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="wayanad">
+        <a href="plan.html" class="card-img"><img src="images/chembarathi.jpg" alt="Chembarathi Wayanad Boutique Resort" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Wayanad · Hills</p>
+          <h3>Chembarathi Wayanad Boutique Resort</h3>
+          <p>A boutique nature retreat near Vaduvanchal, surrounded by lush forests and scenic landscapes, offering thoughtfully designed suites and cottages, private terraces, an infinity pool, and curated wellness and dining experiences for a peaceful getaway.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="varkala">
+        <a href="plan.html" class="card-img"><img src="images/sukavi.jpg" alt="Sukavi" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Varkala · Beach</p>
+          <h3>Sukavi</h3>
+          <p>An exclusive beachfront luxury villa near Varkala, set along the tranquil shores of Paravur Beach, featuring elegant suites, a rooftop infinity pool, ocean views, personalised butler service, spa experiences, and coastal dining for a private and indulgent escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="varkala">
+        <a href="plan.html" class="card-img"><img src="images/bluminiyra.jpg" alt="Blumin Iyra" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Varkala · Beach</p>
+          <h3>Blumin Iyra</h3>
+          <p>A stylish and intimate villa stay in Varkala, located just a short walk from South Cliff, offering comfortable private accommodations, a private pool, modern amenities, and a peaceful setting close to Varkala’s beaches and attractions.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="coorg">
+        <a href="plan.html" class="card-img"><img src="images/ayanta.jpg" alt="Ayatana" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Coorg · Misty Hills</p>
+          <h3>Ayatana</h3>
+          <p>A luxurious nature retreat spread across 100 acres in Coorg, surrounded by lush Western Ghats landscapes, coffee plantations, and a private waterfall, offering elegant accommodations, curated dining, and immersive experiences for a serene escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="coorg">
+        <a href="plan.html" class="card-img"><img src="images/tamara.jpg" alt="The Tamara Coorg" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Coorg · Misty Hills</p>
+          <h3>The Tamara Coorg</h3>
+          <p>A luxury hillside retreat set across 184 acres of coffee and spice plantations, featuring elegant elevated cottages, panoramic valley views, lush greenery, waterfalls, and thoughtfully curated experiences for a peaceful escape immersed in nature.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="coorg">
+        <a href="plan.html" class="card-img"><img src="images/astralis.jpg" alt="Astralis Resort" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Coorg · Misty Hills</p>
+          <h3>Astralis Resort</h3>
+          <p>A refined nature retreat in the hills of Coorg, blending contemporary luxury with serene surroundings and uninterrupted views of the Western Ghats, featuring stylish suites, a pool, spa, stargazing, cycling, and leisure experiences for a tranquil getaway.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="camp">
+        <a href="plan.html" class="card-img"><img src="images/wildsherpas.jpg" alt="Wildsherpas" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Camping</p>
+          <h3>Wildsherpas</h3>
+          <p>A high-altitude wilderness campsite in Yellapetty near Munnar, surrounded by forests, misty valleys, and panoramic views of the Kolukkumalai and Meeshapuli Hills, offering cozy tent stays, bonfires, trekking, and memorable sunrise experiences.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="camp">
+        <a href="plan.html" class="card-img"><img src="images/magicvalley.jpeg" alt="Magic Valley" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Camping</p>
+          <h3>Magic Valley</h3>
+          <p>A secluded off-grid camping retreat in Vattavada, set amid shola forests and misty mountain landscapes, offering tent and A-frame stays, guided treks, waterfall and cave experiences, campfires, and spectacular stargazing at 6,500 feet.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-region="camp">
+        <a href="plan.html" class="card-img"><img src="images/camplights.jpg" alt="Camp Lights" loading="lazy" decoding="async"></a>
+        <div class="card-body">
+          <p class="region">Camping</p>
+          <h3>Camp Lights</h3>
+          <p>A nature-focused retreat near Cheeyappara Waterfalls, surrounded by lush hills and valley views, offering tents, log houses, cabins, and A-frame cottages along with a swimming pool and peaceful outdoor setting for a refreshing mountain escape.</p>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Not sure which stay fits your trip? Tell us the shape of it and we'll suggest a route.</h2>
+      <a href="plan.html" class="btn btn-solid">Plan my itinerary →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/navlogo2.png" alt="Escovia" class="foot-logo">
+        <p>Stays, itineraries, and a community of travellers — all built around Kerala.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="stays.html">Stays</a></li>
+          <li><a href="plan.html">Plan a Trip</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:contact.escovia@gmail.com">contact.escovia@gmail.com</a></li>
+          <li><a href="tel:+919567236247">+91 95672 36247</a></li>
+          <li><a class="wa" href="https://wa.me/919567236247?text=Hi%20Escovia%2C%20I%27d%20like%20to%20plan%20a%20trip%20in%20Kerala." target="_blank" rel="noopener">WhatsApp us</a></li>
+          <li>Kochi, Kerala</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 SevenNineOne Studio</div>
+  </div>
+</footer>
+
+</body>
+</html>
