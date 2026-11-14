@@ -93,11 +93,7 @@
     </div>
 
     <div class="form-card">
-      <form data-web3 novalidate>
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-        <input type="hidden" name="subject" value="New Message — Escovia">
-        <input type="hidden" name="from_name" value="Escovia Website">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <form id="contactForm" novalidate>
 
         <div class="field-row">
           <div class="field">
@@ -106,7 +102,7 @@
           </div>
           <div class="field">
             <label for="aemail">Email</label>
-            <input id="aemail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <input id="aemail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
           </div>
         </div>
         <div class="field">
@@ -122,8 +118,8 @@
 
       <div class="thanks" hidden>
         <span class="tick" aria-hidden="true">✓</span>
-        <h2>Message received.</h2>
-        <p>Thank you for writing. We'll reply by email, usually within a day.</p>
+        <h2>Message ready.</h2>
+        <p>WhatsApp should have opened with your message. Just press send there and we'll reply, usually within a day.</p>
       </div>
     </div>
   </div>
@@ -165,6 +161,48 @@
     <div class="foot-bottom">© 2026 SevenNineOne Studio</div>
   </div>
 </footer>
+
+<script>
+  // Contact form -> open WhatsApp with the message filled in
+  (function () {
+    var WHATSAPP_NUMBER = "919567236247";
+    var form = document.getElementById("contactForm");
+    if (!form) return;
+
+    var status = form.querySelector(".form-status");
+    var thanks = form.parentNode.querySelector(".thanks");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var name    = form.name.value.trim();
+      var email   = form.email.value.trim();
+      var message = form.message.value.trim();
+
+      if (!name || !message) {
+        status.textContent = "Please enter your name and message.";
+        (name ? form.message : form.name).focus();
+        return;
+      }
+      status.textContent = "";
+
+      var lines = [
+        "Hi Escovia, I have a question.",
+        "",
+        "Name: " + name
+      ];
+      if (email) lines.push("Email: " + email);
+      lines.push("", "Message: " + message);
+
+      var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" +
+                encodeURIComponent(lines.join("\n"));
+      window.open(url, "_blank");
+
+      form.hidden = true;
+      if (thanks) thanks.hidden = false;
+    });
+  })();
+</script>
 
 </body>
 </html>
