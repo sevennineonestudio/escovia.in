@@ -133,7 +133,7 @@
           <p class="region">Kochi · Heritage &amp; Culture</p>
           <h3>B Town Resort</h3>
           <p>A peaceful resort near Wonderla Kochi, featuring 21 private cottages set among lush greenery, with garden cottages, private-pool villas, a restaurant, and spacious accommodations ideal for family getaways and relaxing weekends.</p>
-          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Details →</a></div>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Enquire →</a></div>
         </div>
       </article>
 
@@ -143,7 +143,7 @@
           <p class="region">Alappuzha · Backwaters</p>
           <h3>Palmgrove Lake Resort</h3>
           <p>A tranquil lakeside retreat on the banks of Punnamada Lake, featuring elegant Heritage Villas, lush green surroundings, lake views, yoga experiences, and backwater activities for a peaceful and rejuvenating stay in Alleppey.</p>
-          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Details →</a></div>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Enquire →</a></div>
         </div>
       </article>
 
@@ -153,7 +153,7 @@
           <p class="region">Adimali · Hill Station</p>
           <h3>Camp Lights</h3>
           <p>A nature-focused retreat near Cheeyappara Waterfalls, surrounded by lush hills and valley views, offering tents, log houses, cabins, and A-frame cottages along with a swimming pool and peaceful outdoor setting for a refreshing mountain escape.</p>
-          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Details →</a></div>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="stays.html">Enquire →</a></div>
         </div>
       </article>
     </div>
@@ -262,7 +262,9 @@
 </footer>
 
 <script>
-  // Enquire Now -> open WhatsApp with the selected options
+  var WHATSAPP_NUMBER = "919567236247";
+
+  // 1) Search bar "Enquire Now" -> WhatsApp with the selected options
   (function () {
     var form = document.getElementById("finderForm");
     if (!form) return;
@@ -284,7 +286,31 @@
         "Check-in: " + date + "\n" +
         "Travellers: " + guests;
 
-      window.open("https://wa.me/919567236247?text=" + encodeURIComponent(msg), "_blank");
+      window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
+    });
+  })();
+
+  // 2) Featured stay cards "Enquire →" -> WhatsApp with that property's details
+  (function () {
+    var cards = document.querySelectorAll(".card");
+    Array.prototype.forEach.call(cards, function (card) {
+      var link   = card.querySelector(".card-foot a");
+      var nameEl = card.querySelector("h3");
+      var regEl  = card.querySelector(".region");
+      if (!link || !nameEl) return;
+
+      var name   = nameEl.textContent.trim();
+      var region = regEl ? regEl.textContent.trim() : "";
+
+      var msg =
+        "Hi Escovia, I'd like to enquire about this property:\n\n" +
+        "Property: " + name + "\n" +
+        (region ? "Location: " + region + "\n" : "") +
+        "\nCould you please share availability and the best rates?";
+
+      link.href   = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+      link.target = "_blank";
+      link.rel    = "noopener";
     });
   })();
 </script>
