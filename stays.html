@@ -76,7 +76,7 @@
           <p class="region">Alleppey · Backwaters</p>
           <h3>Vedic Village Retreat</h3>
           <p>A serene private-island retreat surrounded by Kerala’s backwaters and lush natural landscapes, offering an intimate escape with thoughtfully designed accommodations, wellness experiences, and peaceful waterfront settings away from the bustle of everyday life.</p>
-          <div class="card-foot"><span>Contact for Best Rates</span><a href="https://vedicvillagehotels.com/alleppey/overview">Details →</a></div>
+          <div class="card-foot"><span>Contact for Best Rates</span><a href="plan.html">Enquire →</a></div>
         </div>
       </article>
 
@@ -606,6 +606,34 @@
     <div class="foot-bottom">© 2026 SevenNineOne Studio</div>
   </div>
 </footer>
+
+<script>
+  // Each "Enquire →" button opens WhatsApp with a message about that property
+  (function () {
+    var WHATSAPP_NUMBER = "919567236247";
+
+    var cards = document.querySelectorAll(".card");
+    Array.prototype.forEach.call(cards, function (card) {
+      var link   = card.querySelector(".card-foot a");
+      var nameEl = card.querySelector("h3");
+      var regEl  = card.querySelector(".region");
+      if (!link || !nameEl) return;
+
+      var name   = nameEl.textContent.trim();
+      var region = regEl ? regEl.textContent.trim() : "";
+
+      var msg =
+        "Hi Escovia, I'd like to enquire about this property:\n\n" +
+        "Property: " + name + "\n" +
+        (region ? "Location: " + region + "\n" : "") +
+        "\nCould you please share availability and the best rates?";
+
+      link.href   = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+      link.target = "_blank";
+      link.rel    = "noopener";
+    });
+  })();
+</script>
 
 </body>
 </html>
