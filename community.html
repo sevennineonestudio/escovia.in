@@ -120,12 +120,7 @@
     </div>
 
     <div class="form-card">
-      <form data-web3 novalidate>
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-        <input type="hidden" name="subject" value="New Community Member — Escovia">
-        <input type="hidden" name="from_name" value="Escovia Website">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
+      <form data-wa="join" novalidate>
         <h3 class="form-title">Become a member</h3>
 
         <div class="field">
@@ -135,7 +130,7 @@
         <div class="field-row">
           <div class="field">
             <label for="jemail">Email</label>
-            <input id="jemail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <input id="jemail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
           </div>
           <div class="field">
             <label for="jphone">Phone / WhatsApp</label>
@@ -163,7 +158,7 @@
       <div class="thanks" hidden>
         <span class="tick" aria-hidden="true">✓</span>
         <h2>Welcome aboard.</h2>
-        <p>You're on the list. We'll be in touch soon with what's new in the community.</p>
+        <p>WhatsApp should have opened with your details. Just press send there and you're on the list. We'll be in touch soon with what's new in the community.</p>
       </div>
     </div>
   </div>
@@ -178,12 +173,7 @@
     </div>
 
     <div class="form-card">
-      <form data-web3 novalidate>
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-        <input type="hidden" name="subject" value="New Community Story — Escovia">
-        <input type="hidden" name="from_name" value="Escovia Website">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
+      <form data-wa="share" novalidate>
         <div class="field-row">
           <div class="field">
             <label for="sname">Your name</label>
@@ -191,7 +181,7 @@
           </div>
           <div class="field">
             <label for="semail">Email</label>
-            <input id="semail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <input id="semail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
           </div>
         </div>
         <div class="field-row">
@@ -224,7 +214,7 @@
       <div class="thanks" hidden>
         <span class="tick" aria-hidden="true">✓</span>
         <h2>Thank you for sharing.</h2>
-        <p>We'll read your story and add it to this page soon.</p>
+        <p>WhatsApp should have opened with your story. Just press send there and we'll read it and add it to this page soon.</p>
       </div>
     </div>
   </div>
@@ -267,5 +257,31 @@
   </div>
 </footer>
 
-</body>
-</html>
+<script>
+  // Community forms (Join + Share) -> open WhatsApp with the details filled in
+  (function () {
+    var WHATSAPP_NUMBER = "919567236247";
+
+    function val(form, name) {
+      return form.elements[name] ? form.elements[name].value.trim() : "";
+    }
+
+    function buildMessage(form) {
+      var type = form.getAttribute("data-wa");
+      var lines = [];
+
+      if (type === "join") {
+        var interests = Array.prototype.slice
+          .call(form.querySelectorAll('input[name="interest"]:checked'))
+          .map(function (c) { return c.value; })
+          .join(", ");
+
+        lines.push("Hi Escovia, I'd like to join the travel community.", "");
+        lines.push("Name: " + val(form, "name"));
+        if (val(form, "email")) lines.push("Email: " + val(form, "email"));
+        if (val(form, "phone")) lines.push("Phone: " + val(form, "phone"));
+        if (interests) lines.push("Interested in: " + interests);
+      } else {
+        lines.push("Hi Escovia, I'd like to share a travel story.", "");
+        lines.push("Name: " + val(form, "name"));
+        if (val(form, "email"))
