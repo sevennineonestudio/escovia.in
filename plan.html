@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,11 +45,7 @@
   <div class="wrap plan-grid">
 
     <div class="form-card">
-      <form data-web3 data-prefill novalidate>
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-        <input type="hidden" name="subject" value="New Trip Enquiry — Escovia">
-        <input type="hidden" name="from_name" value="Escovia Website">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <form id="planForm" data-prefill novalidate>
 
         <div class="field-row">
           <div class="field">
@@ -57,7 +54,7 @@
           </div>
           <div class="field">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
           </div>
         </div>
 
@@ -120,7 +117,7 @@
       <div class="thanks" hidden>
         <span class="tick" aria-hidden="true">✓</span>
         <h2>Thank you — it's with us.</h2>
-        <p>We'll read through your details and come back with a route between stays, usually within a day. For anything urgent, call or message <a href="tel:+919567236247">+91 95672 36247</a>.</p>
+        <p>WhatsApp should have opened with your trip details. Just press send there and we'll come back with a route between stays, usually within a day. For anything urgent, call <a href="tel:+919567236247">+91 95672 36247</a>.</p>
         <a href="stays.html" class="btn btn-outline">Browse stays meanwhile</a>
       </div>
     </div>
@@ -187,5 +184,58 @@
   </div>
 </footer>
 
+<script>
+  // Plan form -> open WhatsApp with all the details filled in
+  (function () {
+    var form = document.getElementById("planForm");
+    if (!form) return;
+
+    var status = form.querySelector(".form-status");
+    var thanks = document.querySelector(".thanks");
+
+    function fmt(v) {                       // yyyy-mm-dd -> dd-mm-yyyy
+      return v ? v.split("-").reverse().join("-") : "";
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var name = form.name.value.trim();
+      if (!name) {
+        status.textContent = "Please enter your name.";
+        form.name.focus();
+        return;
+      }
+      status.textContent = "";
+
+      var interests = Array.prototype.slice
+        .call(form.querySelectorAll('input[name="interest"]:checked'))
+        .map(function (c) { return c.value; })
+        .join(", ");
+
+      var lines = [
+        "Hi Escovia, I'd like to plan a trip in Kerala.",
+        "",
+        "Name: " + name
+      ];
+      if (form.email.value.trim()) lines.push("Email: " + form.email.value.trim());
+      if (form.phone.value.trim()) lines.push("Phone: " + form.phone.value.trim());
+      lines.push("Travellers: " + form.guests.value);
+      if (form.arrive.value)  lines.push("Arrive: " + fmt(form.arrive.value));
+      if (form.depart.value)  lines.push("Depart: " + fmt(form.depart.value));
+      if (form.places.value.trim()) lines.push("Places in mind: " + form.places.value.trim());
+      if (interests) lines.push("Interested in: " + interests);
+      if (form.notes.value.trim()) lines.push("Notes: " + form.notes.value.trim());
+
+      var url = "https://wa.me/919567236247?text=" + encodeURIComponent(lines.join("\n"));
+      window.open(url, "_blank");
+
+      form.hidden = true;
+      if (thanks) thanks.hidden = false;
+    });
+  })();
+</script>
+
 </body>
 </html>
+```
