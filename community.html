@@ -284,4 +284,43 @@
       } else {
         lines.push("Hi Escovia, I'd like to share a travel story.", "");
         lines.push("Name: " + val(form, "name"));
-        if (val(form, "email"))
+        if (val(form, "email")) lines.push("Email: " + val(form, "email"));
+        lines.push("Place: " + val(form, "place"));
+        lines.push("Kind of experience: " + val(form, "type"));
+        lines.push("", "Story: " + val(form, "story"));
+      }
+      return lines.join("\n");
+    }
+
+    var forms = document.querySelectorAll("form[data-wa]");
+    Array.prototype.forEach.call(forms, function (form) {
+      var status = form.querySelector(".form-status");
+      var thanks = form.parentNode.querySelector(".thanks");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // check required fields
+        var required = form.querySelectorAll("[required]");
+        for (var i = 0; i < required.length; i++) {
+          if (!required[i].value.trim()) {
+            if (status) status.textContent = "Please fill in the required fields.";
+            required[i].focus();
+            return;
+          }
+        }
+        if (status) status.textContent = "";
+
+        var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" +
+                  encodeURIComponent(buildMessage(form));
+        window.open(url, "_blank");
+
+        form.hidden = true;
+        if (thanks) thanks.hidden = false;
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
