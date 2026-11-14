@@ -55,7 +55,7 @@
 </section>
 
 <div class="wrap finder-wrap">
-  <form class="finder" action="plan.html" method="get">
+  <form class="finder" id="finderForm" action="plan.html" method="get">
     <label>Where
       <select name="region">
         <option value="">Anywhere in Kerala</option>
@@ -85,7 +85,7 @@
   <div class="wrap">
     <ul class="stats" aria-label="Escovia at a glance">
       <li><strong><span data-count="10">10</span>+</strong><small>Partner locations</small></li>
-      <li><strong><span data-count="45">45</span>+</strong><small>Cozy properties</small></li>
+      <li><strong><span data-count="50">50</span>+</strong><small>Cozy properties</small></li>
       <li><strong><span data-count="10">10</span>+</strong><small>Happy customers</small></li>
     </ul>
   </div>
@@ -260,6 +260,34 @@
     <div class="foot-bottom">© 2026 SevenNineOne Studio</div>
   </div>
 </footer>
+
+<script>
+  // Enquire Now -> open WhatsApp with the selected options
+  (function () {
+    var form = document.getElementById("finderForm");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // stop the plan.html redirect
+
+      var where  = form.region.value || "Anywhere in Kerala";
+      var style  = form.style.value || "Any style";
+      var date   = form.from.value
+        ? form.from.value.split("-").reverse().join("-")   // yyyy-mm-dd -> dd-mm-yyyy
+        : "Not selected";
+      var guests = form.guests.value;
+
+      var msg =
+        "Hi Escovia, I'd like to enquire about a staycation.\n\n" +
+        "Where: " + where + "\n" +
+        "Style: " + style + "\n" +
+        "Check-in: " + date + "\n" +
+        "Travellers: " + guests;
+
+      window.open("https://wa.me/919567236247?text=" + encodeURIComponent(msg), "_blank");
+    });
+  })();
+</script>
 
 </body>
 </html>
